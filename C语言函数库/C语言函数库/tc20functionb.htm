@@ -1,0 +1,525 @@
+<HTML>
+<HEAD >
+<TITLE>嵌入式软件设计教学网站</TITLE>
+
+<!-- <base href=D:\自编图书\教学网站设计\主页\> -->
+<!-- <base href=http://www.hfut.edu.cn\teacher\peng\c\> --> 
+
+<META NAME="作者" long="zh", CONTENT="彭良清">
+<META NAME="标题", CONTENT="嵌入式软件设计教学网站 ">
+<META NAME="关键字", CONTENT="嵌入式软件设计教学网站 C语言 数据结构 
+   实时操作系统 RTOS TC20  TC2.0 Turbo C2.0  人机界面  菜单设计 C51
+   合肥工业大学 精密仪器系  彭良清 源代码阅读 ">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<STYLE type=text/css>
+
+p.texthead {line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; color:rgb(100,150,255);
+font-weight:bold;font-style:normal; text-indent:0em; text-decoration:underline;
+padding-top:0em;padding-bottom:0em;padding-left:2em;padding-right:2em;margin-top:0em;margin-bottom:0em}
+
+p.text {line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;  padding-left:0em;padding-right:0em;     margin-top:0em;margin-bottom:0em}
+
+table.tc20funcationname { border:1px solid black; width:100%; frame:box;  rules:all;
+padding-top:10em;padding-bottom:10em;  padding-left:5em;padding-right:5em;     margin-top:2em;margin-bottom:2em;
+  
+}
+
+table.tc20funcation { border:0px solid black; margin:2em; width:100%; frame:box;  rules:all;
+padding-top:10em;padding-bottom:10em;  padding-left:5em;padding-right:5em;     
+  
+}
+
+tr.funnameline {height:100%;vertical-align:top};
+tr.funline {height:100%;vertical-align:top};
+
+TD.tditem {border:0px solid BLACK; padding:0em; line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; 
+font-weight:bold;font-style:BLUE; text-indent:0em; vertical-align:top; 
+margin-top:0em;margin-bottom:0em}
+
+TD.tdtext {border:0px solid BLACK; line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; vertical-align:middle;
+font-weight:normal;font-style:BLUE; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;  padding-left:1em;padding-right:0em;     margin-top:0em;margin-bottom:0em}
+
+
+p.linktext {line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:2em;padding-bottom:0em;  padding-left:2em;padding-right:2em;     margin-top:0em;margin-bottom:2em}
+
+ol.content{line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;   padding-left:2em;padding-right:2em;    margin-top:0em;margin-bottom:2em}
+
+tr.bottomtext {line-height:15pt;font-size:10pt;font-family:宋体;font-weight:normal;font-style:normal}
+
+A.top:link {text-decoration:none;color:#ff0000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:visited {text-decoration:none;color:#ff0000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:active {text-decoration:none;color:#000000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:hover {text-decoration:none;color:#000000;line-height:150%;font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+
+</STYLE>
+
+<H3 ALIGN="center" >
+<font size=5 color="#a2a2a2"   face="方正舒体">
+	Turbo C2.0集成编译环境使用:
+</font>
+
+<font size=6 color="#808080" face="华文新魏">
+	函数库速查(按字母序)
+</font>
+</h3>
+<HR WIDTH=70% ALIGN=CENTER SIZE=3>
+<p align="center">
+<font face="宋书" color="red" size="2" text="blue" bgcolor="gray">
+欢迎访问新版函数库，本库于2002年8月28日由原来的王大刚版本更换至彭良清版本，提供三种阅读方式。<br>
+本资料来自合肥工业大学，版权所有，在收录本站时根据本站风格，版面稍做了调整，特此声明。 </font></p>
+</H3>
+
+
+</HEAD>
+
+
+<BODY   background=image/bg3.gif text="#010101" bgcolor=white link="#0000FF" vlink="#0000FF" alink="#0000FF" >
+
+
+<table border=1  width=90% align=center  rules=rows  frame=void cellspacing=0% 
+cellpadding=5%  bgcolor=rgb(204,234,255) >
+
+<!--  bgcolor=rgb(204,255,255) -->
+
+
+
+<tr id="B"  class=funnameline>
+<td>
+<p class=text>
+<table class=tc20funcationname >
+<col width=20%>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#bdos>bdos</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#bioscom>bioscom</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#biosdisk>bisodisk</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#biosequip>biosequip</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#bioskey>bioskey</a></td>
+</tr>
+
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#biosmemory>biosmemory</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#biosprint>biosprint</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#biostime>biostime</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#brk>brk</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#bar>bar</a></td>
+</tr>
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#bar3d>bar3d</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#></a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#></a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#></a></td>
+<td CLASS=TDTEXT> <a href=tc20functionb.htm#></a></td>
+</tr>
+
+</table>
+</p>
+</td>
+</tr>
+
+<tr id="bdos" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int bdos(int fnum, unsigned dx, unsigned al) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>执行DOS系统调用INT 21H</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>DOS.H</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>fnum: 系统调用号; dx,al:赋值给DX,AL寄存器的值;</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>寄存器AX的值</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functioni.htm#intdos">intdos </a>  |
+<a href="tc20functioni.htm#intdosx">intdosx </a>  
+</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr id="bioscom" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int bioscom(int cmd, char byte, int port) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>RS232串口通信口操作</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT> 
+<pre>cmd: 0-初始化串口,1-发送一个字符,2-接受一个字符,3:返回串口状态
+byte: 波特率和发送位数设置，各位的含义如下：
+  B7,B6,B5:波特率设置，具体设置为：9600波特－111,4800－110,2400－101,1200－100,600－011,300－010
+  B4,B3   :奇偶校验设置,具体设置为：00或10－无奇偶，01－奇校验，11－偶校验。
+  B2      :停止位个数，1－2个停止位，0－1个停止位
+  B1,B0   :10-7个数据位; 11-8个数据位
+port:串口号,0,1,2,3等
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT> 
+</td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 
+<pre>16位的串口状态信息，各位的含义分别如下：
+  高8位                      低8位(cmd=0,1,3时)        当cmd=2时，低8位用于保存接收的数据   
+  B15: 超时错误               B7: 检测到线路信号
+  B14: 发送移位寄存器空       B6: 振铃指示
+  B13: 发送保持寄存器空       B5: 数据装置就绪
+  B12: 中止检测错误           B4: 数据发送结束 
+  B11: 帧错误                 B3: 线路信号变化 
+  B10: 奇偶错误               B2: 脉冲后沿振铃检测  
+  B9 : 溢出错误               B1: 数据装置就绪变化
+  B8 : 数据准备就绪           B0: 数据发送结束变化
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#"> </a>  
+
+</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+
+<tr id="biosdisk" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td><td CLASS=TDTEXT>int biosdisk(int cmd,int driver,int head,int track,int sector,int nsets,void *buf)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td><td CLASS=TDTEXT>使用INT13完成BIOS级的磁盘操作</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td><td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td><td CLASS=TDTEXT>含义详见PC机的BIOS手册</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT></td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT></td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>谨慎使用，否则会破坏磁盘数据！！</td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiona.htm#absread">absread</a>  
+<a href="tc20functiona.htm#abswrite">abswrite</a>  
+</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="biosequip" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int biosequip(void) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>返回一个表示计算机配置的编码</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT></td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT></td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT></td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionb.htm#bioscom">bioscom</a>  
+</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="bioskey" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int bioskey(int cmd) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>键盘值读取</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>cmd=0: 返回一个键盘值，如无键盘按下，一直等待
+cmd=1: 查询键盘是否按下。返回0，表示无键按下；返回非0，表示有键按下
+cmd=2: 返回控制键状态，返回值保存在低8位中，含义如下：
+        B0: 右边的shift键按下    B5: 已打开Scroll Lock
+        B1: 左边的shift键按下    B6: 已打开Num Lock
+        B3: Ctrl键按下           B7: 已打开Caps Lock
+        B4: Alt键按下            B8: 已打开Insert 
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 含义见上</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiong.htm#getche"> getche </a>  |
+<a href="tc20functionk.htm#kbhit"> kbhit </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="biosmemory" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int biosmemory( void ) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 返回系统配置的内存大小(单位：KB)</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>   </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>内存大小值(KB)</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionb.htm#biosequip">biosequip</a>  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="biosprint" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int biosprint(int cmd , int byte ,int port) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>打印口控制</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>cmd:  0-打印byte中的字符；1-初始化打印口状态；2-返回打印口状态。
+byte: 当cmd=1时，为要打印的字符。
+port: 打印口，0－LPT1;  1-LPT2
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>
+<pre>当cmd=2时，各位含义如下：
+     B0:        超时错误   B5:  已联机         B8: 打印机闲
+     B1,B2,B3:  未使用     B6:  打印纸用完     B9,B10,B11,B12,B13,B14,B15: 未使用 
+     B4:        I/O错误    B7:  认可
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionb.htm#bioscom"> bioscom</a>  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="biostime" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> long biostime( int cmd , long newtime)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>  设置和读取BIOS时钟 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>cmd: 0－读取时钟；1－设置时钟
+newtime：当cmd=1时，为新的设置数值
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>cmd=0时，返回时钟值</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>该时钟为一个每秒18.2次的计数累计值，并在每日24时清零。</td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiont.htm#time">time </a>  |
+<a href="tc20functionc.htm#ctime">ctime </a>  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="brk" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int brk(void *eds)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>改变数据段所用内存的数量</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>alloc.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="bar" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void bar(int left, int top, int right, int bottom) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 画矩形 ,并填充矩形内部区域</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>left,top:屏幕左上角坐标；right,bottom:屏幕左上角坐标；
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionr.htm#rectangle">rectangle</a>  |
+<a href="tc20functionb.htm#bar3d">bar3d</a>  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="bar3d" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void bar(int left, int top, int right, int bottom, int depth, int topflag) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 画2维矩形 ,并填充矩形内部区域</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>left,top:屏幕左上角坐标；right,bottom:屏幕左上角坐标；
+depth:   三维深度
+topflag: 0-不画顶盖；非0－画顶盖
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionr.htm#rectangle">rectangle</a>  |
+<a href="tc20functionb.htm#bar">bar</a>  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr id=" " class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+</table>
+
+
+
+</BODY>
+</HTML>

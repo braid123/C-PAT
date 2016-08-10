@@ -1,0 +1,826 @@
+<HTML>
+<HEAD >
+<TITLE>嵌入式软件设计教学网站</TITLE>
+
+<!--<base href=D:\自编图书\教学网站设计\主页\>  -->
+<!-- <base href=http://http://www.hfut.edu.cn\teacher\peng\c\> --> 
+
+<META NAME="作者" long="zh", CONTENT="彭良清">
+<META NAME="标题", CONTENT="嵌入式软件设计教学网站 ">
+<META NAME="关键字", CONTENT="嵌入式软件设计教学网站 C语言 数据结构 
+   实时操作系统 RTOS TC20  TC2.0 Turbo C2.0  人机界面  菜单设计 C51
+   合肥工业大学 精密仪器系  彭良清 源代码阅读 ">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<STYLE type=text/css>
+
+p.texthead {line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; color:rgb(100,150,255);
+font-weight:bold;font-style:normal; text-indent:0em; text-decoration:underline;
+padding-top:0em;padding-bottom:0em;padding-left:2em;padding-right:2em;margin-top:0em;margin-bottom:0em}
+
+p.text {line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;  padding-left:0em;padding-right:0em;     margin-top:0em;margin-bottom:0em}
+
+table.tc20funcationname { border:1px solid black; width:100%; frame:box;  rules:all;
+padding-top:10em;padding-bottom:10em;  padding-left:5em;padding-right:5em;     margin-top:2em;margin-bottom:2em;
+  
+}
+
+table.tc20funcation { border:0px solid black; margin:2em; width:100%; frame:box;  rules:all;
+padding-top:10em;padding-bottom:10em;  padding-left:5em;padding-right:5em;     
+  
+}
+
+tr.funnameline {height:100%;vertical-align:top};
+tr.funline {height:100%;vertical-align:top};
+
+TD.tditem {border:0px solid BLACK; padding:0em; line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; 
+font-weight:bold;font-style:BLUE; text-indent:0em; vertical-align:top; 
+margin-top:0em;margin-bottom:0em}
+
+TD.tdtext {border:0px solid BLACK; line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; vertical-align:middle;
+font-weight:normal;font-style:BLUE; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;  padding-left:1em;padding-right:0em;     margin-top:0em;margin-bottom:0em}
+
+
+p.linktext {line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:2em;padding-bottom:0em;  padding-left:2em;padding-right:2em;     margin-top:0em;margin-bottom:2em}
+
+ol.content{line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;   padding-left:2em;padding-right:2em;    margin-top:0em;margin-bottom:2em}
+
+tr.bottomtext {line-height:15pt;font-size:10pt;font-family:宋体;font-weight:normal;font-style:normal}
+
+A.top:link {text-decoration:none;color:#ff0000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:visited {text-decoration:none;color:#ff0000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:active {text-decoration:none;color:#000000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:hover {text-decoration:none;color:#000000;line-height:150%;font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+
+</STYLE>
+
+<H3 ALIGN="center" >
+<font size=5 color="#a2a2a2"   face="方正舒体">
+	Turbo C2.0集成编译环境使用:
+</font>
+
+<font size=6 color="#808080" face="华文新魏">
+	函数库速查(按字母序)
+</font>
+</h3>
+<HR WIDTH=70% ALIGN=CENTER SIZE=3>
+<p align="center"><font color="#ff0000" size="2">欢迎访问新版函数库，本库于<span lang="en-us">2002年8月28日</span>由原来的王大刚版本更换至彭良清版本，提供三种阅读方式。<br>
+本资料来自合肥工业大学，版权所有，在收录本站时根据本站风格，版面稍做了调整，特此声明。</font></p>
+</H3>
+
+</HEAD>
+
+<BODY   background=image/bg3.gif text="#010101" bgcolor=white link="#0000FF" vlink="#0000FF" alink="#0000FF" >
+
+
+<table border=1  width=90% align=center  rules=rows  frame=void cellspacing=0% 
+cellpadding=5%  bgcolor=rgb(204,234,255) >
+
+<!--  bgcolor=rgb(204,255,255) -->
+
+
+
+
+<tr id="C"  class=fannameline>
+<td>
+<p class=text>
+<table class=tc20funcation>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#chmod>chmod</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#clearerr>clearerr</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#close>close</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#creat>creat</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#cbs>cbs</a></td>
+</tr>
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#ceil>ceil</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#cos>cos</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#cosh>cosh</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#country>country</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#ctime>ctime</a></td>
+</tr>
+
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#ctrlbrk>ctrlbrk</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#calloc>calloc</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#coreleft>coreleft</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#chdir>chdir</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#circle>circle</a></td>
+</tr>
+
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#cleardevice>cleardevice</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#closegraph>closegraph</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#clreol>clreol</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#clrscr>clrscr</a></td>
+<td CLASS=TDTEXT> <a href=tc20functionc.htm#cputs>cputs</a></td>
+</tr>
+
+
+</table>
+</p>
+</td>
+</tr>
+
+
+
+<tr id="chmod" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int chmod(char *filename, int mode) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 改变文件访问模式</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>io.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="clearerr" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void clearerr(FILE *stream) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>  将文件出错标志清零，重置文件结束指示器 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>stdio.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>stream: 文件的流指针
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionf.htm#feof"> feof </a>  |
+<a href="tc20functionf.htm#ferror"> ferror </a>  |
+<a href="tc20functionp.htm#perror"> ferror </a>  |
+</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="close" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int close(int handle) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 文件关闭 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>bios.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>handle: 要关闭的文件句柄（由open()函数产生）。</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>0－调用成功；1－调用失败 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiono.htm#open"> open </a>  |
+<a href="tc20functionc.htm#creat"> creat </a>  |
+<a href="tc20functionr.htm#read"> read </a>  |
+<a href="tc20functionw.htm#write"> write </a>  |
+<a href="tc20functionu.htm#unlink"> unlink </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="creat" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int creat(char *filename,  int pmode) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 创建一个文件 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>io.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>filename:文件名称；
+pmode:  创建方式，取值和含义如下：
+  S_IFMT:   file type mask        S_IFREG:	regular  
+  S_IFDIR:  directory             S_IREAD:	owner may read 
+  S_IFIFO:  FIFO special 	  S_IWRITE:	owner may write 
+  S_IFCHR:  character special     S_IEXEC:	owner may execute <directory search> 
+  S_IFBLK:  block special 
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>－1:创建文件失败,其他数值表示创建文件的句柄号</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionc.htm#close"> close </a>  |
+<a href="tc20functione.htm#eof"> eof </a>  |
+<a href="tc20functiono.htm#open"> open </a>  |
+<a href="tc20functionr.htm#read"> read </a>  |
+<a href="tc20functionw.htm#write"> write </a>  |
+<a href="tc20functionu.htm#unlink"> unlink </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+
+<tr id="cabs" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> double cabs(struct  complex znum)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 求复数的绝对值 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>math.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>zuum为用结构struct complex表示的复数，struct complex 定义如下：
+    struct complex {
+        double x;
+        double y;
+    }
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 复数的绝对值 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiona.htm#abs"> abs </a>  |
+ 
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="ceil" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>double ceil(double num) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 得到不小于num的最小整数 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>math.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>num: 实数
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 用双精度表示的最小整数 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionf.htm#floor"> floor </a>  |
+<a href="tc20functionf.htm#fmod"> fmod </a>  | 
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="cos" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>double cos(double arg) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>求arg的余弦  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>math.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiona.htm#asin"> asin </a>  |
+<a href="tc20functiona.htm#acos"> acos </a>  |
+<a href="tc20functiona.htm#atan2"> atan2 </a>  |
+<a href="tc20functiona.htm#atan"> atan </a>  |
+<a href="tc20functiont.htm#tan"> tan </a>  |
+<a href="tc20functions.htm#sin"> sin </a>  |
+<a href="tc20functiona.htm#acos"> cos </a>  |
+<a href="tc20functiont.htm#tanh"> tanh </a>  |
+</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="cosh" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>double cosh(double arg) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>求arg的双曲余弦  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>math.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiona.htm#asin"> asin </a>  |
+<a href="tc20functiona.htm#acos"> acos </a>  |
+<a href="tc20functiona.htm#atan2"> atan2 </a>  |
+<a href="tc20functiona.htm#atan"> atan </a>  |
+<a href="tc20functiont.htm#tan"> tan </a>  |
+<a href="tc20functions.htm#sin"> sin </a>  |
+<a href="tc20functionc.htm#cos"> cos </a>  |
+<a href="tc20functiont.htm#tanh"> tanh </a>  |
+    
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="country" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>struct country *country(int countrycode, struct country *countryptr)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 用于设置一些与国家相关的项目，如货币，时间日期的表示方式等</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiont.htm#time"> time </a>  |
+<a href="tc20functionc.htm#ctime"> ctime </a>  | 
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="ctime" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>char *ctime(long time)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 得到日历时间 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>time.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>time:该参数应由函数time获得，见下例。
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT></td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>
+返回一个如下列格式的字符串:星期 月  日  小时：分：秒 年\n\0
+</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>
+<pre>#include<time.h>
+#include<stddef.h>
+main( )
+{
+time_t lt;
+
+    lt=time(NULL);
+    printf("%s current time is:",ctime(&lt));
+}
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionl.htm#localtime">localtime</a> | 
+<a href="tc20functiont.htm#time">time</a> | 
+<a href="tc20functiona.htm#asctime">asctime</a> | 
+<a href="tc20functiong.htm#gmtime">gmtime</a> | 
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="ctrlbrk" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void ctrlbrk(int (*pfun)(vpod)) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 设置当Ctrl-Break组合键按下时，应执行的函数 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>pfun: 要执行的函数指针，该函数应返回0值。
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiong.htm#getinterrupt"> getinterrupt </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr id="calloc" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> void *calloc(unsigned num, unsigned size) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 分配一块内存 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>alloc.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>num, size: 分配内存的数量参数，实际字节数等于：num*size
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>已分配内存的指针，如为NULL，则表示无内存可用  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionm.htm#malloc"> malloc </a>  |
+<a href="tc20functionr.htm#realloc"> realloc </a>  |
+<a href="tc20functionf.htm#free"> free </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="coreleft" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>unsigned coreleft(void)-小模式；long coreleft(void)-大模式； </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>得到heap内存中的剩余字节数  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>alloc.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>剩余字节数 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionm.htm#maklloc"> malloc </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="chdir" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int chadir(char *path) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 改变当前工作目录为path</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dir.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT> path: 新设置的路径名称
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 0：操作成功；-1：操作失败 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionm.htm#mkdir"> mkdir </a>  |
+<a href="tc20functionm.htr#rmdir"> rmdir </a>  | 
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="circle" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void far circle(int x, int y, int radius) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 画圆 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>x,y:圆心坐标； radius:半径
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiona.htm#arc"> arc </a>  |
+<a href="tc20functione.htm#ellipse"> ellipse </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="cleardevice" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> void far cleardevice(void)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 清除屏幕显示  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT> 
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT> 仅用于图形工作方式 </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiong.htm#getviewsettings"> getviewsettings </a>  |
+<a href="tc20functionc.htm#clearviewport"> clearviewport </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+<tr id="clearviewport" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> void far clearviewport(void)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 清除当前屏幕窗口显示  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT> 
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT> 仅用于图形工作方式 </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiong.htm#getviewsettings"> getviewsettings </a>  |
+<a href="tc20functionc.htm#cleardevice"> cleardevice </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="closegraph" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void far closegraph(void) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>关闭图形工作方式  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functioni.htm#initgraph"> initgraph </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="clreol" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void clreol(void) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>清楚当前字符窗口光标处到行尾的所有字符 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiond.htm#delline"> delline </a>  |
+<a href="tc20functionw.htm#window"> window </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="clrsrc" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void clrscr(void) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>清楚当前字符窗口所有字符 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>conio.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functiond.htm#delline"> delline </a>  |
+<a href="tc20functionw.htm#window"> window </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="cputs" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int cputs(const char *str) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>在当前字符窗口显示字符串 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>conio.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>str:要显示的字符串
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>EOF:显示失败；最后一个显示字符：显示成功  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20functionc.htm#cprintf"> cprintf </a>  |
+<a href="tc20functionw.htm#window"> window </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+</table>
+
+
+
+</BODY>
+</HTML>

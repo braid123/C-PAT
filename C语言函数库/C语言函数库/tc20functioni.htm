@@ -1,0 +1,1036 @@
+<HTML>
+<HEAD >
+<TITLE>嵌入式软件设计教学网站</TITLE>
+
+<!-- <base href=D:\自编图书\教学网站设计\主页\> -->
+<!-- <base href=http://www.hfut.edu.cn\teacher\peng\c\> --> 
+
+<META NAME="作者" long="zh", CONTENT="彭良清">
+<META NAME="标题", CONTENT="嵌入式软件设计教学网站 ">
+<META NAME="关键字", CONTENT="嵌入式软件设计教学网站 C语言 数据结构 
+   实时操作系统 RTOS TC20  TC2.0 Turbo C2.0  人机界面  菜单设计 C51
+   合肥工业大学 精密仪器系  彭良清 源代码阅读 ">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<STYLE type=text/css>
+
+p.texthead {line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; color:rgb(100,150,255);
+font-weight:bold;font-style:normal; text-indent:0em; text-decoration:underline;
+padding-top:0em;padding-bottom:0em;padding-left:2em;padding-right:2em;margin-top:0em;margin-bottom:0em}
+
+p.text {line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;  padding-left:0em;padding-right:0em;     margin-top:0em;margin-bottom:0em}
+
+table.tc20funcationname { border:1px solid black; width:100%; frame:box;  rules:all;
+padding-top:10em;padding-bottom:10em;  padding-left:5em;padding-right:5em;     margin-top:2em;margin-bottom:2em;
+  
+}
+
+table.tc20funcation { border:0px solid black; margin:2em; width:100%; frame:box;  rules:all;
+padding-top:10em;padding-bottom:10em;  padding-left:5em;padding-right:5em;     
+  
+}
+
+tr.funnameline {height:100%;vertical-align:top};
+tr.funline {height:100%;vertical-align:top};
+
+TD.tditem {border:0px solid BLACK; padding:0em; line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; 
+font-weight:bold;font-style:BLUE; text-indent:0em; vertical-align:top; 
+margin-top:0em;margin-bottom:0em}
+
+TD.tdtext {border:0px solid BLACK; line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; vertical-align:middle;
+font-weight:normal;font-style:BLUE; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;  padding-left:1em;padding-right:0em;     margin-top:0em;margin-bottom:0em}
+
+
+p.linktext {line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:2em;padding-bottom:0em;  padding-left:2em;padding-right:2em;     margin-top:0em;margin-bottom:2em}
+
+ol.content{line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;   padding-left:2em;padding-right:2em;    margin-top:0em;margin-bottom:2em}
+
+tr.bottomtext {line-height:15pt;font-size:10pt;font-family:宋体;font-weight:normal;font-style:normal}
+
+A.top:link {text-decoration:none;color:#ff0000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:visited {text-decoration:none;color:#ff0000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:active {text-decoration:none;color:#000000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:hover {text-decoration:none;color:#000000;line-height:150%;font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+
+</STYLE>
+
+<H3 ALIGN="center" >
+<font size=5 color="#a2a2a2"   face="方正舒体">
+	Turbo C2.0集成编译环境使用:
+</font>
+
+<font size=6 color="#808080" face="华文新魏">
+	函数库速查(按字母序)
+</font>
+</h3>
+<HR WIDTH=70% ALIGN=CENTER SIZE=3>
+<p align="center"><font color="#ff0000" size="2">欢迎访问新版函数库，本库于<span lang="en-us">2002年8月28日</span>由原来的王大刚版本更换至彭良清版本，提供三种阅读方式。<br>
+本资料来自合肥工业大学，版权所有，在收录本站时根据本站风格，版面稍做了调整，特此声明。</font></p>
+</H3>
+
+
+</HEAD>
+
+
+<BODY   background=image/bg3.gif text="#010101" bgcolor=white link="#0000FF" vlink="#0000FF" alink="#0000FF" >
+
+
+<table border=1  width=90% align=center  rules=rows  frame=void cellspacing=0% 
+cellpadding=5%  bgcolor=rgb(204,234,255) >
+
+<!--  bgcolor=rgb(204,255,255) -->
+
+
+
+
+
+<tr id="I">
+<td>
+<p class=text>
+<table  class=tc20funcation>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isatty>isatty</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isalnum>isalnum</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isalpha>isalpha</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isascii>isascii</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#iscntrl>iscntrl</a></td>
+</tr>
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isdigit>isdigit</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isgraph>isgraph</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#islower>islower</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isprint>isprint</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#ispunct>ispunct</a></td>
+</tr>
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isspace>isspace</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isupper>isupper</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#isxdigit>isxdigit</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#interrupt>interrupt</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#inport>inport</a></td>
+</tr>
+
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#intdos>intdos</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#intdosx>intdosx</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#int86>int86/a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#int86x>int86x</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#intr>intr</a></td>
+</tr>
+
+
+<tr>
+
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#imagesize>imagesize</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#initgraph>initgraph</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#insline>insline</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm#itoa>itoa</a></td>
+<td CLASS=TDTEXT> <a href=tc20functioni.htm# > </a></td>
+</tr>
+
+
+</table>
+</p>
+</td>
+</tr>
+
+
+
+<tr id="isatty" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int  isatty(int handle)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>查询某个文件句柄handle是否与控制台、终端、打印机、串口相连接  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>io.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>handle:要查询的文件句柄号
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非0：相连接，0：不相连接  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functiono.htm#open"> open </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="isalnum" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isalnum(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是字母(A-Z,大小写均可)或数字（0-9）  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="isalpha" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isalpha(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是字母(A-Z,大小写均可) </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="isdigit" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isdigit(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是数字（0-9）  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="isascii" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isascii(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是ASCII码(00－7f之间的数值）</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="iscntrl" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int iscntrl(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是控制字符(数值为00-1f或7f)</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="isgraph" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isgraph(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是除空格之外的可打印字符</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="islower" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int islower(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是小写字母(a-z)</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="isprint" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isprint(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是可打印字符，包括空格 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="ispunct" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int ispunct(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是标点字符或空格</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="isspace" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isspace(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是空格、制表字符或换行字符</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr id="isupper" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isupper(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是大写字母(A-Z）</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="isxdigit" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int isxdigit(int ch)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>测试参数ch是否是十六进制数(0-9,A-F或a-f)</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>ctype.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+ch:测试的参数
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>非零数值：是；0：不是  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr id="interrupt" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> void interrupt(*getvect(int intr)) (void)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>定义一个函数为中断函数，并且该中断函数的中断号为intr</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>
+以上不是一个函数，实际上是说明了中断函数的申明格式，比如我们要将一个函数fun()说明成中断函数，
+可写如下格式：  
+void interrupt( *fun )();
+</td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functions.htm#setvect"> setvect </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="inport" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int inport(int port) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>返回从指定的I/O端口读入一个字（16位数）</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+port:I/O端口地址
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 读入的字数值 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functiono.htm#outport"> ourport </a>  |
+<a href="tc20functiono.htm#outportb"> ourportb </a>  |
+<a href="tc20functioni.htm#inportb"> inportb </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="inportb" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int inportb(int port) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>返回从指定的I/O端口读入一个字节（8位数）</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+port:I/O端口地址
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 读入的字数值 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functiono.htm#outport"> ourport </a>  |
+<a href="tc20functiono.htm#outportb"> ourportb </a>  |
+<a href="tc20functioni.htm#inport"> inport </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="intdos" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int intdos(union REGS *inregs, union REGS *outregs)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>调用DOS的INT21中断  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>inregs:输入各寄存器的参数，该结构如下：
+struct WORDREGS {
+	unsigned int	ax, bx, cx, dx, si, di, cflag, flags;
+};
+
+struct BYTEREGS {
+	unsigned char	al, ah, bl, bh, cl, ch, dl, dh;
+};
+
+union	REGS	{
+	struct	WORDREGS x;
+	struct	BYTEREGS h;
+};
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>outregs:输出参数联合</td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>  |
+<a href="tc20functioni.htm#int86"> int86 </a>  |
+<a href="tc20functionb.htm#bdos"> bdos </a>  |  
+</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="intdosx" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>int intdosx(union REGS *inregs, union REGS *outregs, struct SREGS *segregs)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>调用DOS的INT21中断  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>inregs:输入各寄存器的参数，该结构如下：
+struct WORDREGS {
+	unsigned int	ax, bx, cx, dx, si, di, cflag, flags;
+};
+
+struct BYTEREGS {
+	unsigned char	al, ah, bl, bh, cl, ch, dl, dh;
+};
+
+union	REGS	{
+	struct	WORDREGS x;
+	struct	BYTEREGS h;
+};
+segregs:指定DS和ES寄存器的值
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>outregs:输出参数联合</td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>该函数主要用于大编译模式 </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>  |
+<a href="tc20functioni.htm#int86"> int86 </a>  |
+<a href="tc20functionb.htm#bdos"> bdos </a>  |  
+</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="int86" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> int int86(int intno, union REGS *inregs, union REGS *outregs)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>调用中断号位intno的DOS软中断</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>intro:中断号；
+inregs:输入各寄存器的参数，该结构如下：
+struct WORDREGS {
+	unsigned int	ax, bx, cx, dx, si, di, cflag, flags;
+};
+
+struct BYTEREGS {
+	unsigned char	al, ah, bl, bh, cl, ch, dl, dh;
+};
+
+union	REGS	{
+	struct	WORDREGS x;
+	struct	BYTEREGS h;
+};
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>outregs:输出参数联合  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functioni.htm#intdos">intdos  </a>  |
+<a href="tc20functionb.htm#bdos">bdos  </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="int86x" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> int int86x(int intno, union REGS *inregs, union REGS *outregs, struct SREGS *segregs)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>调用中断号位intno的DOS软中断</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>intro:中断号；
+inregs:输入各寄存器的参数，该结构如下：
+struct WORDREGS {
+	unsigned int	ax, bx, cx, dx, si, di, cflag, flags;
+};
+
+struct BYTEREGS {
+	unsigned char	al, ah, bl, bh, cl, ch, dl, dh;
+};
+
+union	REGS	{
+	struct	WORDREGS x;
+	struct	BYTEREGS h;
+};
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>outregs:输出参数联合  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT> 该函数主要用于大编译模式 </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functioni.htm#intdos">intdos  </a>  |
+<a href="tc20functionb.htm#bdos">bdos  </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="intr" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> void intr(int intno, struct REGPACK *preg)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>调用中断号为intno的DOS软中断</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>intro:中断号；
+pregs:输入各寄存器的参数，该结构如下：
+struct WORDREGS {
+	unsigned int	ax, bx, cx, dx, si, di, cflag, flags;
+};
+
+struct BYTEREGS {
+	unsigned char	al, ah, bl, bh, cl, ch, dl, dh;
+};
+
+union	REGS	{
+	struct	WORDREGS x;
+	struct	BYTER
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>pregs:输出参数联合 </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>该函数是int86函数的一个替代函数  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functioni.htm#int86">int86  </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="imagesize" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>unsigned far imagesize(int left, int top, int right, int bottom)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>得到存储一块屏幕图象所需要的字节数  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>left,   top,   right,   bottom:矩形图形屏幕的坐标</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>存储图象的字节数  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>|
+<a href="tc20functiong.htm#getimage"> getimage </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="initgraph" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> 
+<pre>void far initgraph(int  far *graphdriver,int  far *graphmode,
+		   char far *pathtodriver)
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>初始化图形系统 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>graphdriver:图形驱动器代号，具体如下：	
+	DETECT    0
+	CGA       1
+	MCGA      2  
+	EGA       3
+	EGA64     4 
+	EGAMONO   5
+	IBM8514   6
+	HERCMONO  7
+	ATT400    8
+	VGA       9
+	PC3270    10
+graphmode：选定图形驱动器的工作模式，具体如下：
+    CGAC0      = 0,  /* 320x200 palette 0; 1 page	*/
+    CGAC1      = 1,  /* 320x200 palette 1; 1 page	*/
+    CGAC2      = 2,  /* 320x200 palette 2: 1 page	*/
+    CGAC3      = 3,  /* 320x200 palette 3; 1 page	*/
+    CGAHI      = 4,  /* 640x200 1 page			*/
+    MCGAC0     = 0,  /* 320x200 palette 0; 1 page	*/
+    MCGAC1     = 1,  /* 320x200 palette 1; 1 page	*/
+    MCGAC2     = 2,  /* 320x200 palette 2; 1 page	*/
+    MCGAC3     = 3,  /* 320x200 palette 3; 1 page	*/
+    MCGAMED    = 4,  /* 640x200 1 page			*/
+    MCGAHI     = 5,  /* 640x480 1 page			*/
+    EGALO      = 0,  /* 640x200 16 color 4 pages	*/
+    EGAHI      = 1,  /* 640x350 16 color 2 pages	*/
+    EGA64LO    = 0,  /* 640x200 16 color 1 page 	*/
+    EGA64HI    = 1,  /* 640x350 4 color  1 page 	*/
+    EGAMONOHI  = 0,  /* 640x350 64K on card, 1 page - 256K on card, 4 pages */
+    HERCMONOHI = 0,  /* 720x348 2 pages 		*/
+    ATT400C0   = 0,  /* 320x200 palette 0; 1 page	*/
+    ATT400C1   = 1,  /* 320x200 palette 1; 1 page	*/
+    ATT400C2   = 2,  /* 320x200 palette 2; 1 page	*/
+    ATT400C3   = 3,  /* 320x200 palette 3; 1 page	*/
+    ATT400MED  = 4,  /* 640x200 1 page			*/
+    ATT400HI   = 5,  /* 640x400 1 page			*/
+    VGALO      = 0,  /* 640x200 16 color 4 pages	*/
+    VGAMED     = 1,  /* 640x350 16 color 2 pages	*/
+    VGAHI      = 2,  /* 640x480 16 color 1 page 	*/
+    PC3270HI   = 0,  /* 720x350 1 page			*/
+    IBM8514LO  = 0,  /* 640x480 256 colors		*/
+    IBM8514HI  = 1   /*1024x768 256 colors		*/
+pathtodriver：图形驱动器文件路径。如不修改，图形驱动器文件在TC目录下
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>
+<pre>以下代码将图形系统初始化为VGA 640X480 16色工作方式:
+int driver=VGA,mode=VGAHI;  
+
+    initgraph(&driver,&mode,"c:\\tc")
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>|
+<a href="tc20functiong.htm#getgraphmode"> getgraphmode </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="insline" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void insline(void)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>字符模式下插入一行到当前光标位置 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>conio.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT></td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>|
+<a href="tc20functiond.htm#delline"> delline </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="itoa" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>char *itoa(int value, char *string, int radix)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>将整形数value转换为其等价的字符串  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>stdlib.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+value:要转化的数值；radix:转换的进制，如10表示按十进制转换
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>string:转换后的字符串  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 指向string的指针 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>|
+<a href="tc20functiona.htm#atoi"> atoi </a>  |
+<a href="tc20functionl.htm#ltoa"> ltoa </a>  |
+<a href="tc20functiong.htm#gvct"> gvct </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+</table>
+
+
+
+<table align=center>
+<tr class=bottomtext>
+ <td align=center>
+  　</td>
+</tr>
+
+</table>
+
+
+</BODY>
+</HTML>

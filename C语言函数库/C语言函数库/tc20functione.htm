@@ -1,0 +1,364 @@
+<HTML>
+<HEAD >
+<TITLE>嵌入式软件设计教学网站</TITLE>
+
+<!-- <base href=D:\自编图书\教学网站设计\主页\>  -->
+<!-- <base href=http://www.hfut.edu.cn\teacher\peng\c\> --> 
+
+<META NAME="作者" long="zh", CONTENT="彭良清">
+<META NAME="标题", CONTENT="嵌入式软件设计教学网站 ">
+<META NAME="关键字", CONTENT="嵌入式软件设计教学网站 C语言 数据结构 
+   实时操作系统 RTOS TC20  TC2.0 Turbo C2.0  人机界面  菜单设计 C51
+   合肥工业大学 精密仪器系  彭良清 源代码阅读 ">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<STYLE type=text/css>
+
+
+p.texthead {line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; color:rgb(100,150,255);
+font-weight:bold;font-style:normal; text-indent:0em; text-decoration:underline;
+padding-top:0em;padding-bottom:0em;padding-left:2em;padding-right:2em;margin-top:0em;margin-bottom:0em}
+
+p.text {line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;  padding-left:0em;padding-right:0em;     margin-top:0em;margin-bottom:0em}
+
+table.tc20funcationname { border:1px solid black; width:100%; frame:box;  rules:all;
+padding-top:10em;padding-bottom:10em;  padding-left:5em;padding-right:5em;     margin-top:2em;margin-bottom:2em;
+  
+}
+
+table.tc20funcation { border:0px solid black; margin:2em; width:100%; frame:box;  rules:all;
+padding-top:10em;padding-bottom:10em;  padding-left:5em;padding-right:5em;     
+  
+}
+
+tr.funnameline {height:100%;vertical-align:top};
+tr.funline {height:100%;vertical-align:top};
+
+TD.tditem {border:0px solid BLACK; padding:0em; line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; 
+font-weight:bold;font-style:BLUE; text-indent:0em; vertical-align:top; 
+margin-top:0em;margin-bottom:0em}
+
+TD.tdtext {border:0px solid BLACK; line-height:15pt;font-size:10pt;font-family:宋体;text-align:left; vertical-align:middle;
+font-weight:normal;font-style:BLUE; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;  padding-left:1em;padding-right:0em;     margin-top:0em;margin-bottom:0em}
+
+
+p.linktext {line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:2em;padding-bottom:0em;  padding-left:2em;padding-right:2em;     margin-top:0em;margin-bottom:2em}
+
+ol.content{line-height:15pt;font-size:10pt;font-family:宋体;text-align:justify;
+font-weight:normal;font-style:normal; text-indent:0em; 
+padding-top:0em;padding-bottom:0em;   padding-left:2em;padding-right:2em;    margin-top:0em;margin-bottom:2em}
+
+tr.bottomtext {line-height:15pt;font-size:10pt;font-family:宋体;font-weight:normal;font-style:normal}
+
+A.top:link {text-decoration:none;color:#ff0000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:visited {text-decoration:none;color:#ff0000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:active {text-decoration:none;color:#000000;line-height:150%; font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+A.top:hover {text-decoration:none;color:#000000;line-height:150%;font-size:9pt;font-family:宋体;font-weight:normal;font-style:normal}
+
+</STYLE>
+
+<H3 ALIGN="center" >
+<font size=5 color="#a2a2a2"   face="方正舒体">
+	Turbo C2.0集成编译环境使用:
+</font>
+
+<font size=6 color="#808080" face="华文新魏">
+	函数库速查(按字母序)
+</font>
+</h3>
+<HR WIDTH=70% ALIGN=CENTER SIZE=3>
+<p align="center"><font color="#ff0000" size="2">欢迎访问新版函数库，本库于<span lang="en-us">2002年8月28日</span>由原来的王大刚版本更换至彭良清版本，提供三种阅读方式。<br>
+本资料来自合肥工业大学，版权所有，在收录本站时根据本站风格，版面稍做了调整，特此声明。</font></p>
+</H3>
+
+
+</HEAD>
+
+
+<BODY   background=image/bg3.gif text="#010101" bgcolor=white link="#0000FF" vlink="#0000FF" alink="#0000FF" >
+
+
+<table border=1  width=90% align=center  rules=rows  frame=void cellspacing=0% 
+cellpadding=5%  bgcolor=rgb(204,234,255) >
+
+<!--  bgcolor=rgb(204,255,255) -->
+
+
+
+
+<tr id="E">
+<td>
+<p class=text>
+<table  class=tc20funcation>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+<col width=20%>
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#eof>eof</a></td>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#exp>exp</a></td>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#enable>enable</a></td>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#exit>exit</a></td>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#ellipse>ellipse</a></td>
+</tr>
+
+<tr>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#ecvt>ecvt</a></td>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#></a></td>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#></a></td>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#></a></td>
+<td CLASS=TDTEXT> <a href=tc20functione.htm#></a></td>
+</tr>
+
+</table>
+</p>
+</td>
+</tr>
+
+
+
+
+<tr id="eof " class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td><td CLASS=TDTEXT>int eof(int handle) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>检测文件指针是否已在尾部</td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>io.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>handle:已打开的文件句柄
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 1:文件结尾；0：不在结尾位置；-1:操作出错 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>  |
+<a href="tc20functiono.htm#open"> open </a>  |
+<a href="tc20functionc.htm#close"> close </a>  |
+<a href="tc20functionr.htm#read"> read </a>  |
+<a href="tc20functionw.htm#write"> write </a>  |
+<a href="tc20functionu.htm#unlink"> unlink </a>  |  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr id=" " class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>
+<a href="tc20function.htm#">  </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr id="exp" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>double exp(double arg) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT>求自然数为底的指数e<sup>arg</sup>  </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>math.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>arg: 指数
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>幂数</td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functionl.htm#log"> log </a>  |
+  
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="enable" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT> void enable(void) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 允许中断 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>dos.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre></pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functiond.htm#disable"> disable </a>  |
+<a href="tc20functiong.htm#geninterrupt"> geninterrupt </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="exit" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void exit(int state)</td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 程序中止执行，返回调用过程 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>process.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>state:0-表示正常中止，非0－表示非正常中止
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT>|
+<a href="tc20functiona.htm#aexit"> aexit </a>  |
+<a href="tc20functiona.htm#abort"> abort </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="ellipse" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>void far ellipse(int x, int y, int start,int end,int xradius, int yradius) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 画椭圆弧 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>graphics.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>x,y:圆心坐标；xradius:yradius:椭圆x,y方向半径
+start,end: 圆弧起点和终点角度，已度表示，如start=0,end=360时表示画完整椭圆
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functiona.htm#arc"> arc </a>  |
+<a href="tc20functionc.htm#circle"> circle </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr id="ecvt" class=funline>
+<td>
+<table class=tc20funcation >
+<col width=15%>
+<col width=85%>
+<tr><td CLASS=TDITEM>函数申明：</td> <td CLASS=TDTEXT>char *ecvt(double value, int ndigit,int *dec, int *sign) </td></tr>
+<tr><td CLASS=TDITEM>函数用途：</td> <td CLASS=TDTEXT> 将浮点数转换为字符串 </td></tr>
+<tr><td CLASS=TDITEM>头 文 件：</td> <td CLASS=TDTEXT>stdlib.h</td></tr>
+<tr><td CLASS=TDITEM>输入参数：</td> <td CLASS=TDTEXT>
+<pre>value:待转换底浮点数; ndigit: 转换后底字符串长度；
+</pre>
+</td></tr>
+<tr><td CLASS=TDITEM>输出参数：</td><td CLASS=TDTEXT>dec：小数点位置；sign：符号  </td></tr>
+<tr><td CLASS=TDITEM>返 回 值：</td><td CLASS=TDTEXT> 转换后底字符串指针 </td></tr>
+<tr><td CLASS=TDITEM>使用说明：</td><td CLASS=TDTEXT>  </td></tr>
+<tr><td CLASS=TDITEM>相关函数：</td><td CLASS=TDTEXT> |
+<a href="tc20functionf.htm#fcvt"> fcvt </a>  |
+<a href="tc20functiong.htm#gcvt"> gcvt </a>  |
+</td></tr>
+
+<tr><td clospan=2>　</td></tr>
+<tr><td clospan=2>　</td></tr>
+<tr><td CLASS=TDITEM></td><td CLASS=TDTEXT>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a  href="tc20function.htm">查询其他函数</a>&nbsp;&nbsp;</td></tr>
+</table>
+</td>
+</tr>
+
+
+
+
+
+
+</table>
+
+
+
+<table align=center>
+<tr class=bottomtext>
+ <td align=center>
+  　</td>
+</tr>
+
+</table>
+
+
+</BODY>
+</HTML>
